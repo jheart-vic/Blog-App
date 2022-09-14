@@ -10,4 +10,3 @@ class Post < ApplicationRecord
     comments.last(5)
   end
 end
-
