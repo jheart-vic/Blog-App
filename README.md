@@ -1,24 +1,52 @@
-# README
+![](https://img.shields.io/badge/BLOGAPP-pinkred)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# BLOG-APP
 
-Things you may want to cover:
+> A Blog App that uses to the CRUD methods
 
-* Ruby version
 
-* System dependencies
+## Built With
 
-* Configuration
+- `Ruby on Rail`
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps.
 
-* How to run the test suite
+### Prerequisites
+- `Computer`
+### Setup
+- Clone  `https://github.com/jheart-vic/Blog-App.git`
+### Install
+- `Ruby`
+- `Rail`
+- `PostgresSql`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Author
 
-* Deployment instructions
+👤 **Victor David**
 
-* ...
+
+- Linkedin [victor-David](linkedin.com/in/victor-chiemerie-302a97230)
+- Twitter [victor-David](https://twitter.com/Victorjheart)
+- Github: [@Victor-David](https://github.com/jheart-vic)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
