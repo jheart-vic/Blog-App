@@ -1,11 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-
   before(:each) do
     @user = User.create(name: 'Tom', photo: '', posts_counter: 0)
     @post = Post.create(
-     user: @user,
+      user: @user,
       title: 'Here we are!',
       text: 'Here they go',
       comments_counter: 0,
