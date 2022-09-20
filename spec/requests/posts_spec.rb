@@ -17,7 +17,6 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     before(:example) { get user_posts_path(@user) } # get(:index)
     it 'assigns all posts to @posts' do
-      get user_posts_path(@user)
       expect(assigns(:posts)).to eq(Post.all)
     end
     it 'is a success' do
