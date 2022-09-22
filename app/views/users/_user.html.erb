@@ -1,18 +1,16 @@
-<div>
-    <div>
-      <div>
-        <img src="<%= user.photo %>" width="100" height="100" alt="Profile picture">
+<div class='user-page'>
+    <div class='users'>
+      <div class='img'>
+        <img  src="<%= user.photo %>" width="100" height="100" alt="Profile picture">
       </div>
       <div>
-        <div>
-         <h1>
-          <%= user.name %>
-          </h1>
-          <div>
+        <div class='main'>
+          <h1 class='name'> <%= user.name %> </h1>
+          
             <%= render layout: "shared/tag" do %>
-              <p> Number of posts: <%= user.posts_counter %> </p>
+              <p class='counter'> Number of posts: <%= user.posts_counter %> </p>
             <% end %>
-         </div>
+        
         </div>
       </div>
     </div>

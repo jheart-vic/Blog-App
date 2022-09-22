@@ -1,28 +1,30 @@
 <div>
-  <div>
-    <div>
+  <div class='users'>
+    <div class='img'>
       <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="<%= @users.photo %>" width="100" height="100" alt="Profile picture">
     </div>
-    <div>
-      <div>
+    <div class='main'>
+      <div class='name'>
         <%= @users.name %>
       </div>
       <div>
-        <p>
+        <p class='counter'>
         <%= !@users.posts_counter ? 'No post yet by this user' : "#{@users.posts_counter} post(s) has been published" %>
         </p>
       </div>
-      <div>
+      <div class='counter'>
         Joined in <%= @users.created_at.strftime("%B, %e at %H:%M") %>
       </div>
     </div>
   </div>
-  <div>
+  <div class='bio'>
     <h2>Bio</h2>
     <p><%= @users.bio %></p>
   </div>
-  <%= render @users.show_last_three_posts %>
-  <div>
+  <div class='posts'>
+   <%=  render @users.show_last_three_posts %>
+  </div>
+  <div class='link'>
     <%=  link_to user_posts_path(@users) do %>
       <span>
         See all posts

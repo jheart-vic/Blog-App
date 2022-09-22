@@ -1,19 +1,25 @@
-<div>
-  <div class='flex-post'>
+<div >
+  <div class="posts">
     <div>
-      <p>
-        <%= render layout: "shared/tag" do %> 
-        <%= @posts.comments_counter %> Comments
+      <h2 class='name'>
+      Post
+        <span class="name">By <%= @posts.user.name %></span>
+      </h2>
+      <div>
+        <%= render layout: "shared/tag" do %>
+          <%= @posts.comments_counter %> Comments
         <% end %>
         <%= render layout: "shared/tag" do %>
-        <%= @posts.likes_counter %> Likes
+          <%= @posts.likes_counter %> Likes
         <% end %>
-      </p>
-    <div>
-   <div>
-    <h2> <span>Post By <%= @posts.user.name %></span> </h2>
-     <p> <%= @posts.title %> </p>
-     <div> <%= render partial: 'shared/comment', collection: @posts.comments  %> </div>
+      </div>
+    </div>
+    <p><%= @posts.title %></p>
+    <p><%= @posts.text %></p>
+  </div>
+  <div class="posts">
+  <span class="name"> Comments By <%= @posts.user.name %></span>
+    <%= render partial: 'shared/comment', collection: @posts.user.comments  %>
   </div>
 </div>
      
