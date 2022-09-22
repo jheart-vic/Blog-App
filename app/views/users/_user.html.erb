@@ -1,4 +1,5 @@
-<div class='user-page'>
+<%= link_to "/users/#{user.id}" do %>
+ <div class='user-page'>
     <div class='users'>
       <div class='img'>
         <img  src="<%= user.photo %>" width="100" height="100" alt="Profile picture">
@@ -14,4 +15,5 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
+<% end %>
