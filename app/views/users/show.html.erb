@@ -1,1 +1,32 @@
-<p>This is the first user</p>
+<div>
+  <div>
+    <div>
+      <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="<%= @users.photo %>" width="100" height="100" alt="Profile picture">
+    </div>
+    <div>
+      <div>
+        <%= @users.name %>
+      </div>
+      <div>
+        <p>
+        <%= !@users.posts_counter ? 'No post yet by this user' : "#{@users.posts_counter} post(s) has been published" %>
+        </p>
+      </div>
+      <div>
+        Joined in <%= @users.created_at.strftime("%B, %e at %H:%M") %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Bio</h2>
+    <p><%= @users.bio %></p>
+  </div>
+  <%= render @users.show_last_three_posts %>
+  <div>
+    <%=  link_to user_posts_path(@users) do %>
+      <span>
+        See all posts
+      </span>
+    <% end %>
+  </div>
+</div>

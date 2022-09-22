@@ -1,1 +1,19 @@
-<p>This is the first post</p>
+<div>
+  <div class='flex-post'>
+    <div>
+      <p>
+        <%= render layout: "shared/tag" do %> 
+        <%= @posts.comments_counter %> Comments
+        <% end %>
+        <%= render layout: "shared/tag" do %>
+        <%= @posts.likes_counter %> Likes
+        <% end %>
+      </p>
+    <div>
+   <div>
+    <h2> <span>Post By <%= @posts.user.name %></span> </h2>
+     <p> <%= @posts.title %> </p>
+     <div> <%= render partial: 'shared/comment', collection: @posts.comments  %> </div>
+  </div>
+</div>
+     
