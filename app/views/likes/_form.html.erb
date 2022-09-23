@@ -1,0 +1,7 @@
+<%= form_with url: post_likes_path(post), method: :post, scope: :like, class: 'like-form'  do %>
+  <div>
+    <button type="submit" class="like-btn">
+     Like
+    </button>
+  </div>
+<% end %>

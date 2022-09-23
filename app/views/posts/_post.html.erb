@@ -1,0 +1,14 @@
+<%= link_to user_post_path(post.user, post) do %>
+  <div>
+    <h2><%= post.title %></h2>
+    <p><%= post.text %></p>
+    <div class="flex gap-x-2 mt-4">
+      <%= render layout: "shared/tag" do %>
+        <%= post.comments_counter %> Comments
+      <% end %>
+      <%= render layout: "shared/tag" do %>
+        <%= post.likes_counter %> Likes
+      <% end %>
+    </div>
+  </div>
+<% end %>
