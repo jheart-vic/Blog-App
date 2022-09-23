@@ -3,23 +3,29 @@
     <div>
       <h2 class='name'>
       Post
-        <span class="name">By <%= @posts.user.name %></span>
+        <span class="name">By <%= @post.user.name %></span>
       </h2>
       <div>
         <%= render layout: "shared/tag" do %>
-          <%= @posts.comments_counter %> Comments
+          <%= @post.comments_counter %> Comments
         <% end %>
         <%= render layout: "shared/tag" do %>
-          <%= @posts.likes_counter %> Likes
+          <%= @post.likes_counter %> Likes
         <% end %>
       </div>
     </div>
-    <p><%= @posts.title %></p>
-    <p><%= @posts.text %></p>
+    <p><%= @post.title %></p>
+    <p><%= @post.text %></p>
+  </div>
+  <div>
+    <%= render partial: 'likes/form',  locals: { post: @post }  %>
   </div>
   <div class="posts">
-  <span class="name"> Comments By <%= @posts.user.name %></span>
-    <%= render partial: 'shared/comment', collection: @posts.user.comments  %>
+  <span class="name"> Comments By <%= @post.user.name %></span>
+    <%= render partial: 'shared/comment', collection: @post.user.comments  %>
+  </div>
+  <div class='add-comment'>
+    <%= render partial: 'comments/form', locals: { post: @post }  %>
   </div>
 </div>
      
