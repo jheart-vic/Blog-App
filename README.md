@@ -22,6 +22,9 @@ To get a local copy up and running follow these simple example steps.
 - `Rail`
 - `PostgresSql`
 
+### Testing
+- Run `rspec/spec/folder_name/file_name`
+
 ## Author
 
 👤 **Victor David**
@@ -30,6 +33,12 @@ To get a local copy up and running follow these simple example steps.
 - Linkedin [victor-David](linkedin.com/in/victor-chiemerie-302a97230)
 - Twitter [victor-David](https://twitter.com/Victorjheart)
 - Github: [@Victor-David](https://github.com/jheart-vic)
+
+👤 **Chris Siku**
+
+- GitHub: [@githubhandle](https://github.com/Chrissiku)
+- Twitter: [@twitterhandle](https://twitter.com/christian_siku)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/christian-siku/)
 
 ## 🤝 Contributing
 

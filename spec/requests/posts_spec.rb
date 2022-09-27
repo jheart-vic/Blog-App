@@ -39,7 +39,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it('should assign Post.where(user_id: params[:user_id], id: params[:id]).first to @post') do
-      expect(assigns(:posts)).to eq(@post)
+      expect(assigns(:post)).to eq(@post)
     end
 
     it('response content should contain `@post.title`') do

@@ -15,8 +15,9 @@
       <div class='counter'>
         Joined in <%= @user.created_at.strftime("%B, %e at %H:%M") %>
       </div>
-    </div>
-  </div>
+      </div>
+      </div>
+      <button class='link'> <%= link_to 'New Post', new_user_post_path(@user) %> </button>
   <div class='bio'>
     <h2>Bio</h2>
     <p><%= @user.bio %></p>
@@ -24,11 +25,11 @@
   <div class='posts'>
    <%=  render @user.show_last_three_posts %>
   </div>
-  <div class='link'>
+  <button class='link-to-all-post'>
     <%=  link_to user_posts_path(@user) do %>
       <span>
         See all posts
       </span>
     <% end %>
-  </div>
+  </button>
 </div>
