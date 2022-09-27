@@ -22,7 +22,7 @@
   </div>
   <div class="posts">
   <span class="name"> Comments By <%= @post.user.name %></span>
-    <%= render partial: 'shared/comment', collection: @post.user.comments  %>
+    <%= render partial: 'shared/comment', collection: @comments  %>
   </div>
   <div class='add-comment'>
     <%= render partial: 'comments/form', locals: { post: @post }  %>

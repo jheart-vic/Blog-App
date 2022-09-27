@@ -82,11 +82,15 @@
   text-align: right;
 }
 
-.link,
-.like-form {
+.link-to-all-post {
   text-align: center;
   margin-top: 10px;
   border: 2px solid black;
+}
+
+.like-form {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .post-num {
