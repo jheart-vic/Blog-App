@@ -31,6 +31,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter [victor-David](https://twitter.com/Victorjheart)
 - Github: [@Victor-David](https://github.com/jheart-vic)
 
+👤 **Chris Siku**
+
+- GitHub: [@githubhandle](https://github.com/Chrissiku)
+- Twitter: [@twitterhandle](https://twitter.com/christian_siku)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/christian-siku/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
