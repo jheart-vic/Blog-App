@@ -31,6 +31,13 @@ RSpec.describe 'User pages test index/show ', type: :feature do
       expect(page).to have_content('Rspec test 3')
       expect(page).to have_content('Rspec test 4')
     end
+
+    it 'Should fetch all comments for a post' do
+      @comment = Comment.create(text: '', user: @first_user, post: @post4)
+      visit user_posts_path(@first_user, @post4)
+      expect(page).to have_content(@comment.text)
+    end
+
     it 'Should show redirects me to that post\'s show page. ' do
       visit user_path(@first_user)
       click_on @post4.title
