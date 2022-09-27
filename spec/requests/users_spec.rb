@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it('should assign User.find(params[:id]) to @user') do
-      expect(assigns(:users)).to eq(@user)
+      expect(assigns(:user)).to eq(@user)
     end
   end
 end
