@@ -1,5 +1,9 @@
-<div>
-  <div>
-    <%= render @users %>
-  </div>
+<div class='all-user'>
+  <% if user_signed_in? %>
+    <div>
+      <%= render @users %>
+    </div>
+  <% else %>
+    <a href="/users/sign_in">Sign in</a>
+  <% end %>
 </div>

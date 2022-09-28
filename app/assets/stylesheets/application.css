@@ -133,3 +133,16 @@ button {
   padding: 5px;
   margin-top: 5px;
 }
+
+.login-page,
+.sign-in-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  font-size: large;
+  font-weight: 600;
+}
