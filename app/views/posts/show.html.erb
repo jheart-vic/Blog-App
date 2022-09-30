@@ -21,7 +21,7 @@
         <%= render partial: 'likes/form',  locals: { post: @post }  %>
       </div>
       <% if can? :destroy, @post %>
-        <%= button_to "Delete Post", user_post_path(@post.user, @post.id), method: :delete, class: "btn" %>
+        <%= button_to "Delete", user_post_path(@post.user, @post.id), method: :delete, class: "btn delPostbtn" %>
       <% end %>
     </div>
     <div class="comments">
