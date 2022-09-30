@@ -20,4 +20,15 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
+  config.jwt do |jwt|
+    jwt.secret = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.5vWv5qzQR5Z-6R_dkxXhP8eyZG7GQGbWM_MXJuKuZU0"
+    jwt.dispatch_requests = [
+    ['POST', %r{^/login$}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/logout$}]
+    ]
+    jwt.expiration_time = 5.minutes.to_i
+  end
+
 end
