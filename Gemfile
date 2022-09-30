@@ -8,8 +8,8 @@ gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 
 gem 'devise-jwt'
-gem 'rack-cors'
 gem 'pg', '~> 1.1'
+gem 'rack-cors'
 
 gem 'puma', '~> 5.0'
 
@@ -36,11 +36,11 @@ gem 'devise'
 gem 'cancancan'
 
 group :development, :test do
-  gem 'rails-controller-testing'
-  gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'letter_opener'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
