@@ -21,54 +21,131 @@
   justify-content: space-evenly;
  } */
 
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;700;800&display=swap');
+
 .users {
   display: flex;
   gap: 10px;
-  column-gap: 10px;
   margin-top: 20px;
+  padding: 10px;
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 10px;
   justify-content: space-evenly;
+  align-items: center;
 }
 
-.post {
+.post-header {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.show-users {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.shows {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  margin-top: auto;
+}
+
+.user-in-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.postsParent {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
   padding: 10px;
+  flex: 10;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.PostsInUsers {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin-top: 8px;
+}
+
+.header-in-post {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .eachPost {
   border: 2px solid black;
   padding: 10px;
-  flex: 10;
-  width: 90vw;
+  width: 100%;
   margin-top: 20px;
-  margin-left: 5rem;
+  border-radius: 10px;
 }
 
 .img {
-  margin-top: 10px;
-  width: 10%;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
+  border-radius: 50px;
 }
 
 .main {
   border: 2px solid black;
   padding: 10px;
-  width: 70%;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.bio,
-.posts {
+.bio {
   border: 2px solid black;
   padding: 10px;
   flex: 10;
-  width: 90vw;
-  margin-top: 20px;
-  margin-left: 5rem;
+  width: 80%;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .name {
@@ -80,12 +157,6 @@
 .count {
   margin-right: 20px;
   text-align: right;
-}
-
-.link-to-all-post {
-  text-align: center;
-  margin-top: 10px;
-  border: 2px solid black;
 }
 
 .like-form {
@@ -105,8 +176,22 @@ button {
 }
 
 .add-comment {
-  margin-top: 20px;
-  margin-left: 10rem;
+  display: flex;
+  width: 80%;
+  padding: 10px;
+}
+
+.comment {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-right: 5rem;
+}
+
+.like {
+  position: absolute;
+  margin-top: 4rem;
+  margin-right: 20rem;
 }
 
 .post-form {
@@ -116,6 +201,7 @@ button {
   align-items: center;
   gap: 20px;
   border: solid 2px black;
+  border-radius: 10px;
   width: 30%;
   margin: auto;
   padding: 10px;
@@ -135,14 +221,107 @@ button {
 }
 
 .login-page,
-.sign-in-page {
+.sign-up-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-page h2,
+.sign-up-page h2 {
+  margin-bottom: 1.5rem;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.link-to-newPost,
+.link-to-SignOut,
+.link-to-all-post {
+  width: 80%;
+  background-color: skyblue;
+  border: 1px solid #ccc;
+  margin: 10px auto auto auto;
+}
+
+.new_user .field {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: 1.25rem;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 1.25rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+  width: 80%;
+  height: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.user-page {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login {
-  font-size: large;
-  font-weight: 600;
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  width: 80%;
+  padding: 10px;
+}
+
+.comment-form {
+  border: 2px solid black;
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.wrapper-show-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.show-page-post {
+  margin: 8rem auto auto auto;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.posts-for-show {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 }

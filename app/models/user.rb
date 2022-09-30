@@ -12,6 +12,10 @@ class User < ApplicationRecord
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def show_last_three_posts
-    posts.includes(:user).last(3)
+    posts.last(3)
+  end
+
+  def admin?
+    role == 'admin'
   end
 end

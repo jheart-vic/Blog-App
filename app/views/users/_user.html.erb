@@ -6,7 +6,7 @@
       </div>
       <div>
         <div class='main'>
-          <h1 class='name'> <%= user.name %> </h1>
+          <h1 class='name'> <%= link_to user.name, user_path(user) %> </h1>
           
             <%= render layout: "shared/tag" do %>
               <p class='counter'> Number of posts: <%= user.posts_counter %> </p>
