@@ -1,4 +1,8 @@
 <div>
   <div><%= comment.user.name %></div>
   <div><%= comment.text %></div>
+  <% if can? :destroy, comment %>
+        <%= button_to "Delete", post_comment_path(comment.post, comment), method: :delete, class: "btn" %>
+  <% end %>
+
 </div>
