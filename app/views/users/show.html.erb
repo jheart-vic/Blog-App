@@ -1,36 +1,48 @@
-<div>
-  <div class='users'>
-    <div class='img'>
-      <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="<%= @user.photo %>" width="100" height="100" alt="Profile picture">
+<div class='show-users'>
+  <div class='shows'>
+    <div class='post-header'>
+      <div class='img'>
+        <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="<%= @user.photo %>" width="100" height="100" alt="Profile picture">
+      </div>
+      <div class='main'>
+        <%= link_to user_post_path(@user) do %>
+          <div class='name'>
+            <%= @user.name %>
+          </div>
+        <% end %>
+        <div>
+          <p class='counter'>
+          <%= !@user.posts_counter ? 'No post yet by this user' : "#{@user.posts_counter} post(s) has been published" %>
+          </p>
+        </div>
+        <div class='counter'>
+          Joined in <%= @user.created_at.strftime("%B, %e at %H:%M") %>
+        </div>
+        </div>
+      </div>
+        <button class='link-to-newPost'>
+          <%= link_to 'New Post', new_user_post_path(@user)  %>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'link-to-SignOut' %>
+        </button>
+    <div class='bio'>
+      <h2>Bio</h2>
+      <p><%= @user.bio %></p>
     </div>
-    <div class='main'>
-      <div class='name'>
-        <%= @user.name %>
-      </div>
-      <div>
-        <p class='counter'>
-        <%= !@user.posts_counter ? 'No post yet by this user' : "#{@user.posts_counter} post(s) has been published" %>
-        </p>
-      </div>
-      <div class='counter'>
-        Joined in <%= @user.created_at.strftime("%B, %e at %H:%M") %>
-      </div>
-      </div>
-      </div>
-      <button class='link'> <%= link_to 'New Post', new_user_post_path(@user) %> </button>
-  <div class='bio'>
-    <h2>Bio</h2>
-    <p><%= @user.bio %></p>
+    <div class='postsParent'>
+      <% @user.show_last_three_posts.each do |post| %>
+        <div class='PostsInUsers'> 
+          <p> Post <%= post.id%> <p>
+          <p><%= post.title %></p>
+          <p><%= post.text %></p>
+        </div> 
+      <% end %>
+      <button class='link-to-all-post'>
+        <%=  link_to user_posts_path(@user) do %>
+          <span>
+            See all posts
+          </span>
+          <% end %>
+        </button>
+    </div>
   </div>
-  <div class='posts'>
-   <%=  render @user.show_last_three_posts %>
-  </div>
-  <button class='link-to-all-post'>
-    <%=  link_to user_posts_path(@user) do %>
-      <span>
-        See all posts
-      </span>
-    <% end %>
-  </button>
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
 </div>

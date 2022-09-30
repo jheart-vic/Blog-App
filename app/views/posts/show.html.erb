@@ -1,31 +1,38 @@
-<div >
-  <div class="posts">
-    <div>
-      <h2 class='name'>
-      Post
-        <span class="name">By <%= @post.user.name %></span>
-      </h2>
+<div class='wrapper-show-post'>
+  <div class='show-page-post'>
+    <div class="posts-for-show">
       <div>
-        <%= render layout: "shared/tag" do %>
-          <%= @post.comments_counter %> Comments
-        <% end %>
-        <%= render layout: "shared/tag" do %>
-          <%= @post.likes_counter %> Likes
-        <% end %>
+        <h2 class='name'>
+        Post
+          <span class="name">By <%= @post.user.name %></span>
+        </h2>
+        <div>
+          <%= render layout: "shared/tag" do %>
+            <%= @post.comments_counter %> Comments
+          <% end %>
+          <%= render layout: "shared/tag" do %>
+            <%= @post.likes_counter %> Likes
+          <% end %>
+        </div>
+      </div>
+      <p><%= @post.title %></p>
+      <p><%= @post.text %></p>
+      <div class='like'>
+        <%= render partial: 'likes/form',  locals: { post: @post }  %>
+      </div>
+      <% if can? :destroy, @post %>
+        <%= button_to "Delete", user_post_path(@post.user, @post.id), method: :delete, class: "btn delPostbtn" %>
+      <% end %>
+    </div>
+    <div class="comments">
+    <span class="name"> Comments To <%= @post.user.name %></span>
+      <%= render partial: 'shared/comment', collection: @comments  %>
+    </div>
+    <div class='add-comment'>
+      <div class='comment'>
+        <%= render partial: 'comments/form', locals: { post: @post }  %>
       </div>
     </div>
-    <p><%= @post.title %></p>
-    <p><%= @post.text %></p>
-  </div>
-  <div>
-    <%= render partial: 'likes/form',  locals: { post: @post }  %>
-  </div>
-  <div class="posts">
-  <span class="name"> Comments By <%= @post.user.name %></span>
-    <%= render partial: 'shared/comment', collection: @comments  %>
-  </div>
-  <div class='add-comment'>
-    <%= render partial: 'comments/form', locals: { post: @post }  %>
   </div>
 </div>
      
